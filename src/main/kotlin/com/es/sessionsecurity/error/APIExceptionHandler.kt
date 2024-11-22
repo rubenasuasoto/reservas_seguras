@@ -4,11 +4,13 @@ import com.es.sessionsecurity.error.exception.BadRequestException
 import com.es.sessionsecurity.error.exception.NotFoundException
 import jakarta.servlet.http.HttpServletRequest
 import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.ResponseStatus
 import java.lang.NumberFormatException
 
+@ControllerAdvice
 class APIExceptionHandler {
 
     @ExceptionHandler(
