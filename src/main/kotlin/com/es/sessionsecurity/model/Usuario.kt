@@ -10,6 +10,11 @@ data class Usuario(
     var id: Long?,
     @Column(unique = true)
     var nombre:String,
-    var password:String
-) {
+    var password:String,
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    val rol: Rol = Rol.USER
+) enum class Rol {
+    USER,
+    ADMIN
 }

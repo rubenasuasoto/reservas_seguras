@@ -1,6 +1,7 @@
 package com.es.sessionsecurity.service
 
 import com.es.sessionsecurity.model.Reserva
+import com.es.sessionsecurity.repository.ReservaRepository
 import com.es.sessionsecurity.repository.SessionRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -8,8 +9,8 @@ import org.springframework.stereotype.Service
 @Service
 class ReservaService {
     @Autowired
-    private lateinit var reservaService: ReservaService
+    private lateinit var reservaRepository: ReservaRepository
     fun findByUsuario_Nombre(nombre: String) : List<Reserva>{
-        return reservaService.findByUsuario_Nombre(nombre)
+        return reservaRepository.findByUsuario_Nombre(nombre)
     }
 }
